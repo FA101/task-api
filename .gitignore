@@ -1,0 +1,40 @@
+# Ambiente virtual
+.venv/
+venv/
+env/
+.pipenv/
+
+# Variáveis de ambiente (NUNCA commitar o .env)
+.env
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# SO
+.DS_Store
+Thumbs.db
+
+# Node (caso use frontend React)
+node_modules/
+.next/
+out/
