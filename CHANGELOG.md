@@ -7,7 +7,7 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 
 ---
 
-## [1.0.0] - 2024-12-01
+## [1.0.0] - 2026-04-25
 
 ### Adicionado
 - API RESTful completa para gerenciamento de tarefas
