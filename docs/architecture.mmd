@@ -1,0 +1,15 @@
+flowchart TD
+    Cliente["🖥️ Cliente\nReact / curl / Postman"]
+    Controller["📡 Controller\napp/controllers/task_controller.py\nRotas e endpoints FastAPI"]
+    Service["⚙️ Service\napp/services/task_service.py\nLógica de negócio"]
+    Repository["🗄️ Repository\napp/repositories/task_repository.py\nQueries SQL / SQLAlchemy"]
+    Database[("🐘 PostgreSQL\nPersistência de dados")]
+
+    Cliente -->|"HTTP/JSON"| Controller
+    Controller -->|"chama"| Service
+    Service -->|"acessa"| Repository
+    Repository -->|"SQL"| Database
+    Database -->|"resultado"| Repository
+    Repository -->|"entidade"| Service
+    Service -->|"DTO"| Controller
+    Controller -->|"JSON response"| Cliente
