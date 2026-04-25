@@ -276,7 +276,11 @@ Crie o banco manualmente: `createdb taskdb` ou via psql: `CREATE DATABASE taskdb
 Execute `make install` para instalar as dependências.
 
 **Porta 8000 ocupada**
-Use `lsof -i :8000` para identificar o processo e encerrá-lo, ou altere a porta em `make run`.
+Use `lsof -i :8000` para identificar o processo e encerrá-lo, ou altere a porta em `make run`.**Erro: UnicodeDecodeError ao conectar no PostgreSQL (Windows)**
+Ocorre quando o PostgreSQL retorna mensagens de erro em português. 
+Já corrigido em `app/core/config.py` com `LANG=en_US.UTF-8`.
+Certifique-se de usar Python 3.12 — o Python 3.14 é incompatível 
+com psycopg2-binary e pydantic-core.
 
 ---
 
